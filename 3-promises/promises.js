@@ -49,11 +49,19 @@ const getPost = (post_id) => {
     await getPost(1).then((data) => console.log(data)).catch((e) => console.log(e));
 })();
 
+
 (async () => {
-    const userr = await getUsers();
-    const postt = await getPost(2);
 
-    console.log(userr);
-    console.log(postt);
+    try {
+        const userr = await getUsers();
+        const postt = await getPost(2);
 
+        console.log(userr);
+        console.log(postt);
+    } catch (error) {
+        console.log(error);
+    }
 })();//yukarıdaki gibi de çağrılabilir bu şekilde de çağrılabilir
+
+Promise.all([getUsers, getPost(1)]).then(console.log).catch(console.log);
+//bu şekilde hepsi tek seferde de çağrılabilir
