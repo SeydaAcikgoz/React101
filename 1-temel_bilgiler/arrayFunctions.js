@@ -51,3 +51,8 @@ console.log(persons.some((item) => item.age < 20));
 //every:arrayın bütün elemanlarının şarta uygunluğuna bakar
 console.log(persons.every((item) => item.age > 5));
 console.log(persons.every((item) => item.age > 25));
+
+//includes:verilen ifadenin arrayda olup olmadığı kontrol edilir
+const meyveler = ["elma","armut","kirazz","muz","çilek"]
+console.log(meyveler.includes("portakal"));
+console.log(meyveler.includes("muz"));
