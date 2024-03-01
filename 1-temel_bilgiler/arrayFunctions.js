@@ -38,3 +38,8 @@ const result2 = persons.find((item) => item.name === "Mehmete")
 console.log(result2);
 const result3 = persons.find((item) => item.name === "Mehmet" && item.age >20)
 console.log(result3);
+
+//filter:filtreleme yapar.
+console.log(persons.filter((item) => item.name == "Mehmet"));
+console.log(persons.filter((item) => item.name == "Mehmet" && item.age <21));
+console.log(persons.filter(({name,age}) => name == "Mehmet" && age < 21));
