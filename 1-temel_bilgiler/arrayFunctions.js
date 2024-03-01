@@ -47,3 +47,7 @@ console.log(persons.filter(({name,age}) => name == "Mehmet" && age < 21));
 //some:istenilen özellikte eleman dizide var mı diye kontrol eder
 console.log(persons.some((item) => item.age < 10));
 console.log(persons.some((item) => item.age < 20));
+
+//every:arrayın bütün elemanlarının şarta uygunluğuna bakar
+console.log(persons.every((item) => item.age > 5));
+console.log(persons.every((item) => item.age > 25));
