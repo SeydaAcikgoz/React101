@@ -81,3 +81,23 @@ getData();
     console.log("post2", post2);
 })();//fonksiyon çağrılmadan çalışır.
 
+//Json formatında veri dönerken axios de kullanılabilir
+import axios from "axios";
+(async () => {
+    const { data: users } = await (
+        axios("https://jsonplaceholder.typicode.com/users")
+    );
+
+    const { data: post1 } = await (
+        axios("https://jsonplaceholder.typicode.com/posts/1")
+    );
+
+    const { data: post2 } = await (
+        axios("https://jsonplaceholder.typicode.com/posts/2")
+    );
+
+    console.log("Users", users);
+    console.log("post1", post1);
+    console.log("post2", post2);
+})();//fonksiyon çağrılmadan çalışır.
+
