@@ -43,3 +43,7 @@ console.log(result3);
 console.log(persons.filter((item) => item.name == "Mehmet"));
 console.log(persons.filter((item) => item.name == "Mehmet" && item.age <21));
 console.log(persons.filter(({name,age}) => name == "Mehmet" && age < 21));
+
+//some:istenilen özellikte eleman dizide var mı diye kontrol eder
+console.log(persons.some((item) => item.age < 10));
+console.log(persons.some((item) => item.age < 20));
