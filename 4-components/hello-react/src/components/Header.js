@@ -2,5 +2,5 @@ function Header(){
     return <div>
         Merhaba bu Header bileşeni
     </div>
-}//component baş harfi büyük olmalı.Çünkü küçük olursa html etiketi gibi yorumlanır
+}//componentin baş harfi büyük olmalı.Çünkü küçük olursa html etiketi gibi yorumlanır
 export default Header;
