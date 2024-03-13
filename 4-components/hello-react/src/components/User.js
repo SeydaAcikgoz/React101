@@ -6,7 +6,8 @@ function User({ name, surname, age, isLoggedIn, friends }) {
             <h1>{isLoggedIn ? `${name} ${surname} (${age})`
                 : "Giriş yapmadınız."}
             </h1>
-            {friends.map((friend) => (
+            {friends &&
+            friends.map((friend) => (
                 <div key={friend.id}>
                     {friend.id}-{friend.name}
                 </div> //eğer burada extra işlemler yapılacaksa div return ile döndürülmeli
@@ -14,12 +15,11 @@ function User({ name, surname, age, isLoggedIn, friends }) {
         </>
     )
 }
-
 User.propTypes = {
-    name: PropTypes.string,
-    surname: PropTypes.string,
-    isLoggedIn: PropTypes.bool,
-    age: PropTypes.number,
+    name: PropTypes.string.isRequired, //zorunlu hale geldi
+    surname: PropTypes.string.isRequired,   //zorunlu hale geldi
+    isLoggedIn: PropTypes.bool.isRequired,  //zorunlu hale geldi
+    age: PropTypes.number.isRequired,
     friends: PropTypes.array,
 } //özelliklerin türleri belirlendi.eğer burada belirlenen tür gönderilmezse uyarı verir
 
