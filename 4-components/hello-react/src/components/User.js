@@ -13,6 +13,14 @@ function User({ name, surname, age, isLoggedIn, friends }) {
     )
 }
 
+User.propTypes = {
+    name: PropTypes.string,
+    surname: PropTypes.string,
+    isLoggedIn: PropTypes.bool,
+    age: PropTypes.number,
+    friends: PropTypes.array,
+} //özelliklerin türleri belirlendi.eğer burada belirlenen tür gönderilmezse uyarı verir
+
 // function User(props) {
 //     return (
 //         <h1>
