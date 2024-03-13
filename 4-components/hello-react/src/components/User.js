@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function User({ name, surname, age, isLoggedIn, friends }) {
     return (
         <>
