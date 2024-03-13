@@ -6,13 +6,31 @@ import User from './components/User';
 const name = "Şeyda";
 const surname = "Açıkgöz";
 const isLoggedIn = false;
+const friends = [
+  {
+    id : 1,
+    name : 'Ayşe'
+  },
+  {
+    id : 2,
+    name: 'Fatma'
+  },
+  {
+    id : 3,
+    name: 'Zehra'
+  },
+  {
+    id : 4,
+    name: 'Ali'
+  }
+];
 
 function App() {
   // return React.createElement("div",null,"Hello"); //JSX kullanmadan da yapılabilir.fakat div içinde birden fazla element olduğunda kod gereksiz uzayacağı için JSX kullanıyoruz.
 
   return (
     <>
-      <User name="Şeyda" surname="Açıkgöz" isLoggedIn={true} age={20}/>
+      <User name="Şeyda" surname="Açıkgöz" isLoggedIn={true} age={20} friends={friends}/>
     </>
 
     
@@ -51,4 +69,3 @@ function App() {
 }
 
 export default App;
-
