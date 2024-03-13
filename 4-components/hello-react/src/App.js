@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import React from "react";
+import User from './components/User';
 
 const name = "Şeyda";
 const surname = "Açıkgöz";
@@ -8,27 +9,35 @@ const isLoggedIn = false;
 
 function App() {
   // return React.createElement("div",null,"Hello"); //JSX kullanmadan da yapılabilir.fakat div içinde birden fazla element olduğunda kod gereksiz uzayacağı için JSX kullanıyoruz.
-  
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <Header></Header>
-      <Header />
-      <p className='xyz'>lorem ipsum</p>
-      <label htmlFor='myinput'>
-        Name
-        <input id='myinput'/>
-      </label>
-      <h1>{name}{surname}</h1>{/*componentlerde değişken render etme */}
-      <h1>{`Ben ${name} ${surname}`}</h1>
 
-      <h1>{isLoggedIn && `Ben ${name} ${surname}`}</h1>
-      {!isLoggedIn && "Giriş yapmadınız."}{/*koşullu render işlemi */}
-      
-      <h1>
-        {isLoggedIn ? `Ben ${name} ${surname}` : "Giriş yapmadınız."}{/*koşullu render işlemi böyle de yazılabilir */}
-      </h1>
-    </div>
+  return (
+    <>
+      <User name="Şeyda" surname="Açıkgöz" isLoggedIn={true} age={20}/>
+    </>
+
+    
+
+    // <div className="App">
+    //   <h1>Hello World</h1>
+    //   <Header></Header>
+    //   <Header />
+    //   <p className='xyz'>lorem ipsum</p>
+    //   <label htmlFor='myinput'>
+    //     Name
+    //     <input id='myinput' />
+    //   </label>
+    //   <h1>{name}{surname}</h1>{/*componentlerde değişken render etme */}
+    //   <h1>{`Ben ${name} ${surname}`}</h1>
+
+    //   <h1>{isLoggedIn && `Ben ${name} ${surname}`}</h1>
+    //   {!isLoggedIn && "Giriş yapmadınız."}{/*koşullu render işlemi */}
+
+    //   <h1>
+    //     {isLoggedIn ? `Ben ${name} ${surname}` : "Giriş yapmadınız."}{/*koşullu render işlemi böyle de yazılabilir */}
+    //   </h1>
+    // </div>
+
+
     //class ifadesi js ye özgü olduğu için className kullanılmalı
     //for ifadesi js ye özgü olduğu için htmlFor kullanılmalı
 
@@ -42,3 +51,4 @@ function App() {
 }
 
 export default App;
+
