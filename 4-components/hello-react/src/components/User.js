@@ -1,11 +1,18 @@
 import PropTypes from "prop-types";
 
-function User({ name, surname, age, isLoggedIn, friends }) {
+function User({ name, surname, age, isLoggedIn, friends ,address}) {
+    if(!isLoggedIn){
+        return <div>Giriş yapmadınız.</div>
+    }
     return (
         <>
-            <h1>{isLoggedIn ? `${name} ${surname} (${age})`
-                : "Giriş yapmadınız."}
+            <h1>{`${name} ${surname} (${age})`}
             </h1>
+
+            {address.title} {address.zip}
+            <br />
+            <br />
+
             {friends &&
             friends.map((friend) => (
                 <div key={friend.id}>
@@ -26,6 +33,11 @@ User.propTypes = {
         zip: PropTypes.number
     }) ,
 } //özelliklerin türleri belirlendi.eğer burada belirlenen tür gönderilmezse uyarı verir
+
+User.defaultProps = {
+    name : "İsimsiz",
+    isLoggedIn : false
+}   //eğer buradaki değişkenlere değer gönderilmemiş ise bu değerler gönderilmiş varsayılır
 
 // function User(props) {
 //     return (
