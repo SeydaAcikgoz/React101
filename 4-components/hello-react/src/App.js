@@ -30,7 +30,10 @@ function App() {
 
   return (
     <>
-      <User name="Şeyda" surname="Açıkgöz" isLoggedIn={true} age={20} friends={friends}/>
+      <User name="Şeyda" surname="Açıkgöz" isLoggedIn={true} age={20} friends={friends}  address={{
+          title : "Ataşehir/İstanbul",
+          zip:1585
+        }}/>
     </>
 
     
