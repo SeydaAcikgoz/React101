@@ -21,6 +21,10 @@ User.propTypes = {
     isLoggedIn: PropTypes.bool.isRequired,  //zorunlu hale geldi
     age: PropTypes.oneOfType([PropTypes.number,PropTypes.string]).isRequired,       //herhangi bir matematiksel işlem yapılmayacağı için hem number hem de string tanımladık
     friends: PropTypes.array,
+    address: PropTypes.shape({
+        title: PropTypes.string,
+        zip: PropTypes.number
+    }) ,
 } //özelliklerin türleri belirlendi.eğer burada belirlenen tür gönderilmezse uyarı verir
 
 // function User(props) {
