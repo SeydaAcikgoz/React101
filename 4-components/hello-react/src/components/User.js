@@ -19,7 +19,7 @@ User.propTypes = {
     name: PropTypes.string.isRequired, //zorunlu hale geldi
     surname: PropTypes.string.isRequired,   //zorunlu hale geldi
     isLoggedIn: PropTypes.bool.isRequired,  //zorunlu hale geldi
-    age: PropTypes.number.isRequired,
+    age: PropTypes.oneOfType([PropTypes.number,PropTypes.string]).isRequired,       //herhangi bir matematiksel işlem yapılmayacağı için hem number hem de string tanımladık
     friends: PropTypes.array,
 } //özelliklerin türleri belirlendi.eğer burada belirlenen tür gönderilmezse uyarı verir
 
